@@ -1,0 +1,11 @@
+Only one of the tick boxes should be allowed to be ticked not both, currently both can be ticked. 
+Its one or the other and this applies to both forms. Also the error message isn't appearing if nothing is ticked and it should be? 
+
+Where these forms trigger an email with the details in, please can you add to the email the new information from the tick boxes so,
+ If box 1 is ticked - the email should say:
+'Full GDPR consent given: YES',
+'Consent Given for this Request only: NO'
+
+but if the first box isn't ticked and the second one is the email needs to say:
+'Full GDPR consent given: NO'
+'Consent Given for this Request only: YES

@@ -1,0 +1,57 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Design of Typography.
+ */
+
+
+/* background color */
+.bg-white {
+  background-color: $white;
+}
+
+/* Text color */
+.text-white {
+  color: $white;
+}
+.text-black {
+  color: $black;
+}
+.text-orange {
+  color: $orange;
+}
+
+
+.line-inherit {
+  line-height: inherit;
+}
+
+
+/* Font weight */
+.font-weight-light {
+  font-weight: 300;
+}
+.font-weight-regular {
+  font-weight: 400;
+}
+.font-weight-medium {
+  font-weight: 500;
+}
+.font-weight-bold {
+  font-weight: 700;
+}
+.font-weight-extra-bold {
+  font-weight: 900;
+}
+
+/* Font transform */
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+.font-italic {
+  font-style: italic;
+}

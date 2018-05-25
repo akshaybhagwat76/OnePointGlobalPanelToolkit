@@ -1,0 +1,42 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Base css of site
+ */
+
+* {
+  line-height: normal;
+  vertical-align: top;
+}
+
+/*body {
+  color: rgba($black, .7);
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  @media (max-width: 767px) {
+    font-size: 12px;
+  }
+}*/
+
+a {
+  /*color: $grey;*/
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    /*color: $green;*/
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+video {
+  height: auto;
+  width: 100%;
+}

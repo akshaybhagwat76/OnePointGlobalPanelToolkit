@@ -1,0 +1,62 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Form SCSS
+ */
+
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='number'],
+input[type='tel'],
+input[type='search'],
+textarea,
+select,
+.form-control {
+  /*height: 50px;
+  padding: 4px 12px;
+  background-color: $white;
+  border-top: 0;
+  border-right: 0;
+  color: #C2C2C2;
+  border-bottom: 2px solid #DEDEDE;
+  border-left: 0;
+  font-size: 14px;*/
+  @include border-radius(0);
+  @include box-shadow(none);
+  /*@media (max-width: 767px) {
+    height: 35px;
+  }*/
+}
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='password']:focus,
+input[type='number']:focus,
+input[type='tel']:focus,
+input[type='search']:focus,
+textarea:focus,
+select:focus,
+.form-control:focus {
+  outline: none;
+  @include box-shadow(none);
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='number'],
+input[type='tel'],
+input[type='search'],
+textarea {
+  @include appearance(none);
+}
+
+/*::-webkit-input-placeholder { color: #C2C2C2;}
+:-moz-placeholder { color: #C2C2C2; } 
+::-moz-placeholder { color: #C2C2C2; } 
+:-ms-input-placeholder { color: #C2C2C2; } */
+
+
+
