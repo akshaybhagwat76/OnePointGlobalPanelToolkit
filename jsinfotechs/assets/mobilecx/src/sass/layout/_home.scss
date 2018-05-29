@@ -1,0 +1,355 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Home page SCSS
+ */
+*,
+*::after,
+*::before,
+ul {
+	list-style: initial;
+}
+ul,
+.caption-list {
+	padding-left: 28px;
+}
+
+/* Banner */
+.top-banner-bg {
+	@media (max-width: 992px) {
+		background-image: url('../imgs/top-banner-bg-overlay.png');
+	}
+}
+.body-content {
+	padding-top: 84px;
+	@media (max-width: 767px) {
+		padding-top: 55px;
+	}
+	.top-banner-img {
+		background-attachment: initial;
+		background-position: top;
+	}
+}
+.top_banner {
+	.caption {
+		top: 25%;
+		@media (max-width: 992px) {
+			top: 10%;
+		}
+		.caption-title {
+			font-size: 32px;
+    	line-height: 42px;
+    	span {
+    		display: block;
+    	}
+		}
+		.caption-list li {
+			color: inherit;
+		}
+		button {
+			padding: 8px 16px !important;
+			border-color: $orange;
+			background-color: $orange;
+			color: $white;
+			&:hover {
+				background-color: $white;
+				color: $orange;
+			}
+		}
+	}
+}
+.toolkit {
+	.toolkit-w-100 {
+		@include calc('width', '100% + 30px');
+	}
+	.toolkit_block {
+		border: 1px solid #D1D1D1;
+		min-height: 270px;
+		.p-10 {
+			text-align: center;
+			padding: 10px;
+		}
+		.toolkit_block-img {
+			height: 125px;
+			@media (max-width: 480px) {
+				height: auto;
+			}
+			img {
+				width: 100%;
+				height: 100%;
+				@media (max-width: 480px) {
+					width: auto;
+					height: auto;
+				}	
+			/*	@media (max-width: 480px) {
+					width: auto;
+				}*/
+			}
+		}
+		.toolkit_block-title {
+	    margin-bottom: 10px;
+	    font-size: 16px;
+	    color: $orange;
+	    letter-spacing: 0;
+		}
+		.toolkit_block-text {
+			font-size: 14px;
+			letter-spacing: 0;
+		}
+	}
+}
+.clients-section {
+	.col {
+		@media (max-width: 767px) {
+			width: 33.33%;
+			max-width: 33.33%;
+			-webkit-flex-basis: auto;
+    	-ms-flex-preferred-size: auto;
+	    flex-basis: auto; 
+	    -webkit-box-flex: auto; 
+	    -webkit-flex-grow: auto; 
+	    -ms-flex-positive: auto;
+	    flex-grow: unset;
+		}
+	}
+}
+.w-20 {
+	max-width: 20%;
+	@media (max-width: 1199px) {
+		max-width: 33.33%;
+		flex: 0 0 33.33%
+	}
+	@media (max-width: 767px) {
+		max-width: 50%;
+		flex: 0 0 50%
+	}
+	@media (max-width: 480px) {
+		max-width: 100%;
+		flex: 0 0 100%
+	}
+}
+
+/* Signup */
+.signup {
+  background-color: #EFEFEF;
+	@media (max-width: 992px) {
+		padding: 1.5rem 0;
+	}
+	.signup-list {
+		color: inherit;
+		li {
+			color: inherit;
+			padding-left: 0;
+			line-height: 28px;
+			&:before {
+				display: none;
+			}
+		}
+	}
+	.signup-form {
+		padding: 40px;
+		@media (max-width: 992px) {
+			padding: 25px;
+		}
+		.title {
+			margin-bottom: 2rem;
+		}
+		button {
+			margin-bottom: 20px;
+			padding: 12px 20px !important;
+		}
+		.video-button {
+			margin-bottom: 0;
+			padding: 12px 20px !important;
+			&:hover {
+				color: $orange;
+				border-color: $white;
+				background-color: $white;
+			}
+			@media (min-width: 1440px) {
+				left: 0;
+				margin-top: 0;
+				float: none;
+			}
+		}
+	}
+}
+
+/* Onetoolkit */
+.onetoolkit {
+	margin-bottom: 20px;
+	.onetoolkit-grid {
+		margin-bottom: 50px;
+		@media  (max-width: 480px) {
+			margin-bottom: 30px;
+		}
+		.onetoolkit-image {
+			float: left;
+			width: 115px;
+			@media (max-width: 480px) {
+				width: 100%;
+				text-align: center;
+				margin-bottom: 15px;
+			}
+			img {
+				width: 100px;
+			}
+		}
+		.onetoolkit-details {
+			float: left;
+			@include calc('width', '100% - 115px');
+			@media (max-width: 480px) {
+				width: 100%;
+				text-align: center;
+			}
+			.onetoolkit-title {
+				margin-bottom: 10px;
+			}
+			.onetoolkit-description {
+				line-height: 24px;
+			}
+		}
+	}
+}
+
+/* Model design */
+.modal {
+	background-color: rgba(0,0,0,0.8);
+	z-index: 9999;
+	.modal-content {
+		width: 350px;
+		text-align: center;
+		background-color: $orange;
+		border: 2px solid $white;
+		color: $white;
+		font-weight: 600;
+		@include border-radius(0);
+		@media (max-width: 380px) {
+			width: 290px;
+		}
+		.close {
+	    top: 0;
+			right: 0;
+	    left: auto;
+	    margin-left: 0;
+	    margin-right: 0;
+	    margin-top: 0;
+	    padding: 0px 3px;
+	    background: $white;
+	    opacity: 1;
+	    color: $orange;
+	    line-height: 24px;
+		}
+	}
+}
+
+/* Footer design */
+.footer {
+	&::before {
+		background-color: rgba(72, 77, 80, 0.8);
+	}
+	.social {
+		li {
+			a {
+				@media (max-width: 480px) {
+					padding: 0 0.7rem 1rem;
+				}
+			}
+		}
+	}
+	.subscribe-form {
+		textarea {
+			height: 51px;
+		}
+	}
+	#ContactForm {
+		&:hover {
+			background-color: $white;
+			color: $orange;
+		}
+	}
+}
+
+
+
+/*Extra*/
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #FFF;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #f79137;
+}
+
+
+.checkbox-container a.black {
+    color: #000;
+}
+
+.checkbox-container a {
+    color: #f79137;
+}
+
+span.checkmark.greycheck {
+    border: 1px solid #FFF;
+}
+
+
+
+.checkbox-container .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+

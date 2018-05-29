@@ -1,0 +1,57 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Header SCSS.
+ */
+
+header.fixed-header {
+  height: 84px;
+  background-color: $orange;
+  @media (max-width: 767px) {
+    height: 55px;/*
+    background-color: $white;
+    border-bottom: 1px solid $orange;*/
+  }
+  .logo {
+    padding: 4px 0;
+  }
+  .header-mid {
+    padding: .5rem 0;
+  }
+  nav.primary-nav ul {
+    padding: 1.5rem 0;
+    li {
+      a {
+        &:focus,
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+  /*.unav-burger {
+    span {
+      background-color: $orange;
+      &:before {
+        background-color: $orange;
+      }
+      &:after {
+        background-color: $orange;
+      }
+    }
+    &.unav-burger-open {
+      span {
+        background-color: $white;
+      }
+    }
+  }*/
+  .primary-nav.unav-sidebar-show {
+    top: 55px;
+    padding: 0;
+    background-color: $orange;
+  }
+}
+header.sticky .header-mid {
+  background-image: none;
+}

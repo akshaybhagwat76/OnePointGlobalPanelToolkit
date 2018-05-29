@@ -3,12 +3,11 @@ $('#btnContactForm').click(function () {
     var retval = true;
     var custname = $("#Custname").val().trim();
     var email = $("#Custemail").val().trim();
-    var msg = $("#msg").val().trim();
 
-    if (custname != "" && email != "" && msg != "") {
+    if (custname != "" && email != "") {
         if (($("input[name='progress']:checked").length) <= 0) {
             //alert("Please tick at least one of the boxes before clicking ‘Send Message’.");
-            alertify.alert('Message', 'You must select one of the options above before your message can be sent. Thank you.');
+            alertify.alert('Message', 'Please tick at least one of the boxes before clicking ‘Send’.');
             retval = false;
             return false;
         }
@@ -16,7 +15,7 @@ $('#btnContactForm').click(function () {
 
     if (retval) {
         $.ajax({
-            url: '../api/service/ContactEmail?name=' + $('#Custname').val() + '&email=' + $("#Custemail").val() + '&message=' + $("#msg").val() + '&GDPRStatus=' + $("input[name='progress']:checked").val(),
+            url: '../api/service/ContactEmailMR?name=' + $('#Custname').val() + '&email=' + $("#Custemail").val() + '&GDPRStatus=' + $("input[name='progress']:checked").val(),
             type: 'POST',
             data: {},
             success: function (data) {
@@ -30,7 +29,7 @@ $('#btnContactForm').click(function () {
                     $('#myContactForm')[0].reset();
                     var modal = document.getElementById('myModal');
                     modal.style.display = "block";
-                    $('#emailmessage').html("Thank you. We will be in touch shortly.");
+                    $('#emailmessage').html("<center>Thank you.<br /> We will be in touch shortly.<center/>");
                 }
             }
         })
@@ -91,23 +90,23 @@ $('#mymsgForm').click(function () {
     var custname = $("#Cname").val().trim();
 
     var email = $("#email").val().trim();
-    
+
     var companyname = $('#Companyname').val().trim();
 
     var mobile = $('#mobNumber').val().trim();
-
-    if (custname != "" && email != "" && companyname != "" && mobile != "") {
-    	if (($("input[name='msgprogress']:checked").length) <= 0) {
-    	    //alert("Please tick at least one of the boxes before clicking ‘Send’.");
-    	    alertify.alert('Message', 'You must select one of the options above before your message can be sent. Thank you.');
-    		retval = false;
-    		return false;
-    	}
-    } else { retval = true; return true; }
     
+    if (custname != "" && email != "" && companyname != "" && mobile != "") {
+        if (($("input[name='msgprogress']:checked").length) <= 0) {
+            //alert("Please tick at least one of the boxes before clicking ‘Send’.");
+            alertify.alert('Message', 'Please tick at least one of the boxes before clicking ‘Send Message’.');
+            retval = false;
+            return false;
+        }
+    } else { retval = true; return true; }
+
     if (retval) {
         $.ajax({
-            url: '../api/service/SignUpEmail?name=' + $('#Cname').val() + '&email=' + $("#email").val() + '&phonenumber=' + $('#mobNumber').val().trim() + '&companyname=' + $('#Companyname').val().trim() + '&GDPRStatus=' + $("input[name='msgprogress']:checked").val(),
+            url: '../api/service/SignUpEmailMR?name=' + $('#Cname').val() + '&email=' + $("#email").val() + '&phonenumber=' + $('#mobNumber').val().trim() + '&companyname=' + $('#Companyname').val().trim() + '&GDPRStatus=' + $("input[name='msgprogress']:checked").val(),
             type: 'POST',
             data: {},
             success: function (data) {
@@ -120,7 +119,7 @@ $('#mymsgForm').click(function () {
                 else {
                     var modal = document.getElementById('myModal');
                     modal.style.display = "block";
-                    $('#emailmessage').html("Thank you. We will be in touch shortly.");
+                    $('#emailmessage').html("Thank you.<br /> We will be in touch shortly.");
                     $('#mySignUp')[0].reset();
                 }
             }
